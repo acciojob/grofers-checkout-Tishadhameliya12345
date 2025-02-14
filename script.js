@@ -12,17 +12,17 @@ const getSum = () => {
         total = total + parseFloat(prices[i].textContent); 
     }
 
+	const existingAnsRow = document.getElementById("ans");
+
 	const table = document.querySelector("table");
     const totalRow = document.createElement("tr");
-    // const totalCell = document.createElement("td");
+	totalRow.id = "ans";
 
-	// totalCell.colSpan = 2;
     totalRow.textContent = `Total Price: Rs ${total}`;
 
-	// totalRow.appendChild(totalCell);
     table.appendChild(totalRow);
 
-	// getSumBtn.disabled = true;
+	
   
 };
 
